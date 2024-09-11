@@ -1,0 +1,30 @@
+def identificar_interruptores_lampadas():
+    estados_lampadas = {
+        "lampada_1": "apagada",
+        "lampada_2": "apagada",
+        "lampada_3": "apagada"
+    }
+
+    # Simulação dos interruptores
+    # Ligar o primeiro interruptor e deixar ligado por 10 minutos
+    estados_lampadas["lampada_1"] = "acesa"  # Simula que a lâmpada está ligada e quente
+    # Desligar o primeiro interruptor e ligar o segundo
+    estados_lampadas["lampada_1"] = "apagada"  # Simula que a lâmpada esfriou
+    estados_lampadas["lampada_2"] = "acesa"  # Lâmpada ligada pelo segundo interruptor
+    # Ligar o terceiro interruptor
+    estados_lampadas["lampada_3"] = "acesa"  # Lâmpada ligada pelo terceiro interruptor
+    # Simular ida até as lâmpadas e identificação
+    # Vamos assumir que a lâmpada que está acesa é a que está sendo controlada pelo segundo interruptor
+    # A lâmpada quente é a que foi controlada pelo primeiro interruptor
+    # A lâmpada fria é a que foi controlada pelo terceiro interruptor
+    resultado = {
+        "interruptor_1": "lampada_3",
+        "interruptor_2": "lampada_2",
+        "interruptor_3": "lampada_1"
+    }
+    return resultado
+
+resultado = identificar_interruptores_lampadas()
+print("Identificação dos interruptores:")
+for interruptor, lampada in resultado.items():
+    print(f"{interruptor} controla {lampada}")
