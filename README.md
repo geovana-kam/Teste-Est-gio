@@ -1,0 +1,1 @@
+Este repositório contém uma série de exercícios de programação desenvolvidos como parte do processo de aplicação para uma vaga de estágio. Os exercícios abordam conceitos fundamentais e são projetados para testar habilidades de programação e resolução de problemas.
